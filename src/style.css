@@ -6,7 +6,7 @@ h1 {
 }
 .weather-container {
   max-width: 750px;
-  margin: 40px auto;
+  margin: 40px auto 25px auto;
   padding: 30px;
   border-radius: 20px;
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.1);
@@ -39,4 +39,16 @@ h1 {
 .sun-icon-down {
   color: #ffd900;
   font-size: 26px;
+}
+.contact-me {
+  text-align: center;
+  opacity: 0.8;
+  font-size: 14px;
+  padding: 0 20px;
+}
+.contact-me a {
+  text-decoration: none;
+}
+.contact-me a:hover {
+  text-decoration: underline;
 }
