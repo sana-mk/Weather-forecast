@@ -9,12 +9,15 @@
       rel="stylesheet"
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
-      />
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/32d408eab1.js"
       crossorigin="anonymous"
@@ -24,9 +27,9 @@
   <body>
     <div class="container">
       <div class="weather-container">
-       <form id="search-form">
-              <div class="row mt-3 text-center">
-                <div class="col">
+        <form id="search-form">
+          <div class="row mt-3 text-center">
+            <div class="col">
               <div class="mb-3">
                 <input
                   type="search"
@@ -35,96 +38,92 @@
                   autocomplete="off"
                   id="search-input"
                 />
-                    </div>
-                  </div>                 
-             <div class="col-3 text-center">
-               <input 
-               type="submit"
-                value="Search" 
-                class="btn form-control btn-primary search-btn "
-                />   
               </div>
-                <div class="col-3 text-center">            
-                <input 
-                type="button" 
+            </div>
+            <div class="col-3 text-center">
+              <input
+                type="submit"
+                value="Search"
+                class="btn form-control btn-primary search-btn"
+              />
+            </div>
+            <div class="col-3 text-center">
+              <input
+                type="button"
                 value="Current"
-                class="btn form-control btn-primary current-btn"  
-                id="current-weather-btn"  
-                />   
-              
-              </div>  
-            </div>          
-              </form>
+                class="btn form-control btn-primary current-btn"
+                id="current-weather-btn"
+              />
+            </div>
+          </div>
+        </form>
         <div class="row">
           <div class="col-sm-6">
             <div class="forecast">
               <h1 id="city">Tehran</h1>
               <h2 class="ms-1">
                 <span id="temp">20</span>
-                <span>
-                °C
-                </span>
+                <span> °C </span>
               </h2>
-               <ul class="time-day">
-                <li class="text-end" id="day">
-                Wendesday
-                </li>
-                <li class="text-end" id="date">
-                  3/8/2022
-                </li>
-              </ul>             
+              <ul class="time-day">
+                <li class="text-end" id="day">Wendesday</li>
+                <li class="text-end" id="date">3/8/2022</li>
+              </ul>
             </div>
           </div>
           <div class="col-sm-6 text-center">
             <i class="fa-solid fa-sun sun-icon mt-5"></i>
-            <p class="mt-4 weather-inform mt-4" id="weather-description">Sunny</p>
+            <p class="mt-4 weather-inform mt-4" id="weather-description">
+              Sunny
+            </p>
           </div>
         </div>
-        <hr class="mt-4 mb-4 text-center"/>
+        <hr class="mt-4 mb-4 text-center" />
         <div class="row text-center">
           <div class="col">
-           <ul class="weather-forecast-5days">
-            <li>Thu</li>
-            <li>38°C</li>
-            <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
-           </ul>
+            <ul class="weather-forecast-5days">
+              <li>Thu</li>
+              <li>38°C</li>
+              <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
+            </ul>
           </div>
           <div class="col">
             <ul class="weather-forecast-5days">
-   <ul class="weather-forecast-5days">
-            <li>Fri</li>
-            <li>36°C</li>
-            <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
-           </ul>
-          </div>         
-          <div class="col">
-             <ul class="weather-forecast-5days">
-            <li>Sun</li>
-            <li>37°C</li>
-            <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
-           </ul>
+              <li>Fri</li>
+              <li>36°C</li>
+              <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
+            </ul>
           </div>
           <div class="col">
-             <ul class="weather-forecast-5days">
-            <li>Sat</li>
-            <li>37°C</li>
-            <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
-           </ul>
+            <ul class="weather-forecast-5days">
+              <li>Sun</li>
+              <li>37°C</li>
+              <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
+            </ul>
           </div>
           <div class="col">
-              <ul class="weather-forecast-5days">
-            <li>Mon</li>
-            <li>37°C</li>
-            <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
-           </ul>
+            <ul class="weather-forecast-5days">
+              <li>Sat</li>
+              <li>37°C</li>
+              <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul class="weather-forecast-5days">
+              <li>Mon</li>
+              <li>37°C</li>
+              <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
+            </ul>
           </div>
         </div>
       </div>
-       <footer  class="contact-me">
-       <a href="https://github.com/sana-mk/Weather-forecast" target="_blank">Open-source code</a>
-       , by 
-       <a href="mailto:sanamk1384@gmail.com" target="_blank">Sana-MK</a> 
-       </footer>
+      <footer class="contact-me">
+        <a href="https://github.com/sana-mk/Weather-forecast" target="_blank"
+          >Open-source code</a
+        >
+        , by
+        <a href="mailto:sanamk1384@gmail.com" target="_blank">Sana-MK</a>
+      </footer>
     </div>
     <script src="src/index.js"></script>
   </body>
