@@ -28,6 +28,15 @@ h1 {
   margin: 15px;
   padding: 25px;
 }
+.time-day {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+.time-day li {
+  line-height: 35px;
+  font-size: 19px;
+}
 .sun-icon {
   color: #ffd900;
   font-size: 100px;
@@ -35,6 +44,14 @@ h1 {
 .weather-inform {
   font-size: 40px;
   text-transform: capitalize;
+}
+.weather-forecast-5days {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.weather-forecast-5days li {
+  margin-bottom: 25px;
 }
 .sun-icon-down {
   color: #ffd900;

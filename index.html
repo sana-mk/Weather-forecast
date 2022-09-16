@@ -24,9 +24,9 @@
   <body>
     <div class="container">
       <div class="weather-container">
-        <div class="row mt-3 text-center">
-          <div class="col">
-            <form id="search-form">
+       <form id="search-form">
+              <div class="row mt-3 text-center">
+                <div class="col">
               <div class="mb-3">
                 <input
                   type="search"
@@ -36,8 +36,7 @@
                   id="search-input"
                 />
                     </div>
-                  </div>
-                  
+                  </div>                 
              <div class="col-3 text-center">
                <input 
                type="submit"
@@ -54,8 +53,8 @@
                 />   
               
               </div>  
+            </div>          
               </form>
-              </div>          
         <div class="row">
           <div class="col-sm-6">
             <div class="forecast">
@@ -66,9 +65,14 @@
                 °C
                 </span>
               </h2>
-              
-              <h5 class="text-end mt-5" id="day">Wendesday</h5>
-              <h5 class="text-end" id="date">3/8/2022</h5>
+               <ul class="time-day">
+                <li class="text-end" id="day">
+                Wendesday
+                </li>
+                <li class="text-end" id="date">
+                  3/8/2022
+                </li>
+              </ul>             
             </div>
           </div>
           <div class="col-sm-6 text-center">
@@ -79,29 +83,40 @@
         <hr class="mt-4 mb-4 text-center"/>
         <div class="row text-center">
           <div class="col">
-            <p class="mb-4">Thu</p>
-            <p class="mb-4">38°C</p>
-            <i class="fa-solid fa-sun sun-icon-down"></i>
+           <ul class="weather-forecast-5days">
+            <li>Thu</li>
+            <li>38°C</li>
+            <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
+           </ul>
           </div>
           <div class="col">
-            <p class="mb-4">Fri</p>
-            <p class="mb-4">36°C</p>
-            <i class="fa-solid fa-sun sun-icon-down"></i>
+            <ul class="weather-forecast-5days">
+   <ul class="weather-forecast-5days">
+            <li>Fri</li>
+            <li>36°C</li>
+            <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
+           </ul>
+          </div>         
+          <div class="col">
+             <ul class="weather-forecast-5days">
+            <li>Sun</li>
+            <li>37°C</li>
+            <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
+           </ul>
           </div>
           <div class="col">
-            <p class="mb-4">Sun</p>
-            <p class="mb-4">37°C</p>
-            <i class="fa-solid fa-sun sun-icon-down"></i>
+             <ul class="weather-forecast-5days">
+            <li>Sat</li>
+            <li>37°C</li>
+            <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
+           </ul>
           </div>
           <div class="col">
-            <p class="mb-4">Sat</p>
-            <p class="mb-4">37°C</p>
-            <i class="fa-solid fa-sun sun-icon-down"></i>
-          </div>
-          <div class="col">
-            <p class="mb-4">Mon</p>
-            <p class="mb-4">37°C</p>
-            <i class="fa-solid fa-sun sun-icon-down"></i>
+              <ul class="weather-forecast-5days">
+            <li>Mon</li>
+            <li>37°C</li>
+            <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
+           </ul>
           </div>
         </div>
       </div>
