@@ -37,9 +37,10 @@ h1 {
   line-height: 35px;
   font-size: 19px;
 }
-.sun-icon {
-  color: #ffd900;
-  font-size: 100px;
+.img-icon {
+  width: 150px;
+  height: 150px;
+  margin-top: 15px;
 }
 .weather-inform {
   font-size: 40px;

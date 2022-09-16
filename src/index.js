@@ -27,15 +27,22 @@ function dayAndTime(timestamp) {
   return `${day}  ${hours}:${minutes}`;
 }
 function displayWeatherInfo(response) {
+  console.log(response);
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temp");
   let descriptionElement = document.querySelector("#weather-description");
   let dateElement = document.querySelector("#day-and-time");
   let fullDateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   descriptionElement.innerHTML = response.data.weather[0].description;
   dateElement.innerHTML = dayAndTime(response.data.dt * 1000);
   fullDateElement.innerHTML = date(new Date());
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 let apiKey = "6585e4dd6be7801dafc43890d5cfc86f";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?&q=New York&units=metric&appid=${apiKey}`;
