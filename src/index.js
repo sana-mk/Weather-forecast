@@ -34,6 +34,7 @@ function displayWeatherInfo(response) {
   let dateElement = document.querySelector("#day-and-time");
   let fullDateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
+  cityElement.innerHTML = response.data.name;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   descriptionElement.innerHTML = response.data.weather[0].description;
   dateElement.innerHTML = dayAndTime(response.data.dt * 1000);
@@ -44,6 +45,21 @@ function displayWeatherInfo(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-let apiKey = "6585e4dd6be7801dafc43890d5cfc86f";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?&q=New York&units=metric&appid=${apiKey}`;
-axios.get(apiUrl).then(displayWeatherInfo);
+function search(city) {
+  let apiKey = "6585e4dd6be7801dafc43890d5cfc86f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?&q=${city}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayWeatherInfo);
+}
+function handleSubmit(event) {
+  event.preventDefault();
+  let inputElement = document.querySelector("#search-input");
+  inputElement.value = inputElement.value.trim();
+  if (inputElement.value) {
+    search(inputElement.value);
+  } else {
+    alert("Please enter a city.");
+  }
+}
+search("Tehran");
+let formElement = document.querySelector("#search-form");
+formElement.addEventListener("submit", handleSubmit);
