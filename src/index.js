@@ -27,7 +27,6 @@ function dayAndTime(timestamp) {
   return `${day}  ${hours}:${minutes}`;
 }
 function displayWeatherInfo(response) {
-  console.log(response);
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temp");
   let descriptionElement = document.querySelector("#weather-description");
