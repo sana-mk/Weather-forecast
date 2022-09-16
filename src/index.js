@@ -60,6 +60,19 @@ function handleSubmit(event) {
     alert("Please enter a city.");
   }
 }
+function searchLocation(position) {
+  let latitude = position.coords.lat;
+  let longitude = position.coords.lon;
+  let apiKey = "6585e4dd6be7801dafc43890d5cfc86f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?&lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayWeatherInfo);
+}
+function currentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
 search("Tehran");
 let formElement = document.querySelector("#search-form");
 formElement.addEventListener("submit", handleSubmit);
+let currentBtnElement = document.querySelector("#current-weather-btn");
+currentBtn.addEventListener("click", currentLocation);
