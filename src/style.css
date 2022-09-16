@@ -17,15 +17,10 @@ h1 {
   margin-left: 5px;
   margin-right: 30px;
 }
-.search-btn,
-.current-btn {
-  padding: 5px 8px;
-  max-width: 150px;
-}
 .forecast {
   border: 2px solid #53a8b6;
   border-radius: 8px;
-  margin: 15px;
+  margin: 15px auto;
   padding: 25px;
 }
 .time-day {
@@ -43,7 +38,7 @@ h1 {
   margin-top: 15px;
 }
 .weather-inform {
-  font-size: 40px;
+  font-size: 35px;
   text-transform: capitalize;
 }
 .weather-forecast-5days {
