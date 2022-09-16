@@ -74,4 +74,4 @@ search("Tehran");
 let formElement = document.querySelector("#search-form");
 formElement.addEventListener("submit", handleSubmit);
 let currentBtnElement = document.querySelector("#current-weather-btn");
-currentBtn.addEventListener("click", currentLocation);
+currentBtnElement.addEventListener("click", currentLocation);
