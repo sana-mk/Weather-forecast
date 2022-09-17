@@ -27,11 +27,13 @@ function dayAndTime(timestamp) {
   return `${day}  ${hours}:${minutes}`;
 }
 function displayWeatherInfo(response) {
+  console.log(response.data);
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temp");
   let descriptionElement = document.querySelector("#weather-description");
   let dateElement = document.querySelector("#day-and-time");
   let fullDateElement = document.querySelector("#date");
+  let windElement = document.querySelector("#wind");
   let iconElement = document.querySelector("#icon");
   cityElement.innerHTML = response.data.name;
   celsiusTemperature = response.data.main.temp;
@@ -39,6 +41,7 @@ function displayWeatherInfo(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   dateElement.innerHTML = dayAndTime(response.data.dt * 1000);
   fullDateElement.innerHTML = date(new Date());
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
