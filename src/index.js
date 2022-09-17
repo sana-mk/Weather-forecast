@@ -34,7 +34,8 @@ function displayWeatherInfo(response) {
   let fullDateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
   cityElement.innerHTML = response.data.name;
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   descriptionElement.innerHTML = response.data.weather[0].description;
   dateElement.innerHTML = dayAndTime(response.data.dt * 1000);
   fullDateElement.innerHTML = date(new Date());
@@ -70,8 +71,28 @@ function currentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temp");
+  let fahrenheit = (celsiusTemperature * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheit);
+  celsiusElement.classList.remove("active");
+  fahrenheitElement.classList.add("active");
+}
+function convertToCelsius(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temp");
+  temperature.innerHTML = Math.round(celsiusTemperature);
+  celsiusElement.classList.add("active");
+  fahrenheitElement.classList.remove("active");
+}
 search("Tehran");
 let formElement = document.querySelector("#search-form");
 formElement.addEventListener("submit", handleSubmit);
 let currentBtnElement = document.querySelector("#current-weather-btn");
 currentBtnElement.addEventListener("click", currentLocation);
+let celsiusTemperature = null;
+let fahrenheitElement = document.querySelector("#fahrenheit-link");
+fahrenheitElement.addEventListener("click", convertToFahrenheit);
+let celsiusElement = document.querySelector("#celsius-link");
+celsiusElement.addEventListener("click", convertToCelsius);
