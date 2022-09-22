@@ -26,6 +26,27 @@ function dayAndTime(timestamp) {
   let day = days[date.getDay()];
   return `${day}  ${hours}:${minutes}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = ` <div class="row text-center">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+             <div class="col">
+               <ul class="weather-forecast-5days">
+                 <li>${day}</li>
+                 <li>38°C</li>
+                 <li><i class="fa-solid fa-sun sun-icon-down"></i></li>
+               </ul>
+             </div>
+           
+ `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 function displayWeatherInfo(response) {
   console.log(response.data);
   let cityElement = document.querySelector("#city");
@@ -99,3 +120,4 @@ let fahrenheitElement = document.querySelector("#fahrenheit-link");
 fahrenheitElement.addEventListener("click", convertToFahrenheit);
 let celsiusElement = document.querySelector("#celsius-link");
 celsiusElement.addEventListener("click", convertToCelsius);
+displayForecast();
