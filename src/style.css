@@ -27,21 +27,6 @@ h1 {
   margin: 15px auto;
   padding: 25px;
 }
-.units {
-  font-size: 20px;
-}
-.units a {
-  text-decoration: none;
-}
-.active {
-  color: black;
-  font-size: 28px;
-  cursor: default;
-  text-decoration: none;
-}
-.active:hover {
-  color: black;
-}
 .time-day {
   list-style: none;
   padding: 0;
